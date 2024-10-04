@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Student>
+@{
+    <html>
+
+    <head>
+        <title>Index</title>
+    </head>
+
+    <body>
+        <h1>Liste des etudiants</h1>
+        <table class="table table-dark table-striped-columns">
+
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Details </th>
+                <th>Edit </th>
+                <th>Delete </th>
+            </tr>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.StudentId</td>
+                    <td>@student.LastName</td>
+                    <td>@student.FirstName</td>
+                    <TD><a asp-action="ShowDetails" asp-route-id="@student.StudentId" class="btn btn-primary">Détail</a></TD>
+                    <TD><a asp-action="Edit" asp-route-id="@student.StudentId" class="btn btn-primary"> edit this</a> </TD>
+                    <TD><a asp-action="Delete" asp-route-id="@student.StudentId" class="btn btn-primary"> delete this</a> </TD>
+                </tr>
+            }
+        </table>
+        <a asp-action="CreateStudent" class="btn btn-primary">Create new Student</a>
+    </body>
+
+    </html>
+}

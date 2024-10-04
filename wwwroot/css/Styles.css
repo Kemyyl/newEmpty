@@ -1,0 +1,28 @@
+body {
+    background: url('../images/background.jpg');
+    background-size: cover;
+    /* L'image couvre tout l'écran */
+   background-position: center;
+    /* Centrer l'image */
+   background-repeat: no-repeat;
+    /* Évite la répétition de l'image */
+   height: 100vh;
+    /* S'assure que l'image prend toute la hauteur */
+   margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+}

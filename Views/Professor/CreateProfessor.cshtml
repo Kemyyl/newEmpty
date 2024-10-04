@@ -1,0 +1,23 @@
+﻿@*
+For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Professor
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateProfessor</title>
+</head>
+
+<body>
+    <h1>Create a new Professor</h1>
+<form asp-action="Create" asp-asp-controller="Professor" method="post">
+        <label asp-for="ProfessorId"></label> <input asp-for="ProfessorId" /> <br>
+        <label asp-for="FirstName"></label> <input asp-for="FirstName" /> <br>
+        <label asp-for="LastName"></label> <input asp-for="LastName" /> <br>
+        <label asp-for="Matiere"></label> <input asp-for="Matiere" /> <br>
+        <input type="submit" value="Create Professor" />
+    </form>
+</body>
